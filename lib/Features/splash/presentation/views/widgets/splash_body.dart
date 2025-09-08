@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:store/Features/splash/presentation/views/widgets/splash_stack.dart';
 import 'package:store/core/utils/colors.dart';
-import 'package:store/core/utils/styles.dart';
 
 class SplashBody extends StatelessWidget {
   const SplashBody({super.key});
@@ -8,32 +8,21 @@ class SplashBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: SafeArea(
-        child: Container(
-          decoration: BoxDecoration(
-            gradient: LinearGradient(
-              colors: [
-                const Color.fromARGB(255, 231, 94, 105),
-                Colorss.kPrimaryColor,
-              ],
-              begin: Alignment.topCenter,
-              end: Alignment.bottomCenter,
-              stops: [0.1, 1.0],
-            ),
-          ),
-          child: Stack(
-            children: [
-              Center(
-                child: Text(
-                  "FOODGO",
-                  style: Styles.textStyle60.copyWith(
-                    color: Colors.white,
-                  ),
-                ),
-              ),
+      body: Container(
+        padding: EdgeInsets.all(0),
+        margin: EdgeInsets.all(0),
+        decoration: BoxDecoration(
+          gradient: LinearGradient(
+            colors: [
+              const Color.fromARGB(255, 231, 94, 105),
+              Colorss.kPrimaryColor,
             ],
+            begin: Alignment.topCenter,
+            end: Alignment.bottomCenter,
+            stops: [0.06, 1.0],
           ),
         ),
+        child: SplashStack(),
       ),
     );
   }
