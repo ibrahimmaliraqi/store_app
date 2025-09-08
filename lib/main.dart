@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:store/Features/splash/presentation/views/splash_view.dart';
+import 'package:store/core/utils/app_router.dart';
 import 'package:store/core/utils/colors.dart';
 
 void main() {
@@ -12,9 +12,10 @@ class StoreApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return MaterialApp.router(
+      routerConfig: AppRouter.router,
       debugShowCheckedModeBanner: false,
-      home: SplashView(),
+
       themeMode: ThemeMode.light,
       theme: ThemeData(
         textTheme: ThemeData.light().textTheme.apply(
