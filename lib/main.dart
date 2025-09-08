@@ -20,6 +20,7 @@ class StoreApp extends StatelessWidget {
         textTheme: ThemeData.light().textTheme.apply(
           bodyColor: Colorss.kCategoryCardColor,
           displayColor: Colorss.kCategoryCardColor,
+          fontFamily: GoogleFonts.poppins().fontFamily,
         ),
       ),
     );
