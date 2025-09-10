@@ -19,7 +19,7 @@ class SplashBody extends StatelessWidget {
             ],
             begin: Alignment.topCenter,
             end: Alignment.bottomCenter,
-            stops: [.02, 1.0],
+            stops: [.3, 1.0],
           ),
         ),
         child: SplashStack(),
