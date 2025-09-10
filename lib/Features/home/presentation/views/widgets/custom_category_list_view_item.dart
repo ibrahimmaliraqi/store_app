@@ -3,7 +3,8 @@ import 'package:store/core/utils/colors.dart';
 import 'package:store/core/utils/styles.dart';
 
 class CustomCategoryListViewItem extends StatelessWidget {
-  const CustomCategoryListViewItem({super.key});
+  const CustomCategoryListViewItem({super.key, required this.cate});
+  final String cate;
 
   @override
   Widget build(BuildContext context) {
@@ -15,7 +16,7 @@ class CustomCategoryListViewItem extends StatelessWidget {
         borderRadius: BorderRadius.circular(20),
       ),
       child: Text(
-        "Combos",
+        cate,
         style: Styles.textStyle16,
       ),
     );

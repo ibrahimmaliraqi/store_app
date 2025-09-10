@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:store/Features/home/presentation/views/widgets/custom_category_list_view_item.dart';
+import 'package:store/core/utils/app_category.dart';
 
 class CustomCategoryListView extends StatelessWidget {
   const CustomCategoryListView({super.key});
@@ -9,10 +10,13 @@ class CustomCategoryListView extends StatelessWidget {
     return SizedBox(
       height: 50,
       child: ListView.builder(
+        reverse: true,
         scrollDirection: Axis.horizontal,
-        itemCount: 3,
+        itemCount: category.length,
         itemBuilder: (context, index) {
-          return CustomCategoryListViewItem();
+          return CustomCategoryListViewItem(
+            cate: category[index].cate,
+          );
         },
       ),
     );
