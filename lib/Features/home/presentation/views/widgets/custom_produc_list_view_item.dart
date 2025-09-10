@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:store/Features/home/presentation/views/widgets/custom_product_image.dart';
 import 'package:store/Features/home/presentation/views/widgets/rating_widget.dart';
 import 'package:store/core/utils/assets.dart';
-import 'package:store/core/utils/colors.dart';
 import 'package:store/core/utils/styles.dart';
 
 class CustomProductListViewitem extends StatelessWidget {
