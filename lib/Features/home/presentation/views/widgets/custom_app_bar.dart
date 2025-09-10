@@ -25,7 +25,7 @@ class CustomAppBar extends StatelessWidget {
             ),
             Text(
               "Order your favourite food!",
-              style: Styles.textStyle18.copyWith(
+              style: Styles.textStyle16.copyWith(
                 fontWeight: FontWeight.w400,
               ),
             ),

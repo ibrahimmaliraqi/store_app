@@ -6,19 +6,19 @@ class CustomProductListView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Expanded(
-      child: GridView.builder(
-        gridDelegate: SliverGridDelegateWithMaxCrossAxisExtent(
-          maxCrossAxisExtent: 185,
-          mainAxisExtent: 225,
-          crossAxisSpacing: 10,
-          mainAxisSpacing: 10,
-        ),
-        itemCount: 20,
-        itemBuilder: (context, index) {
-          return CustomProductListViewitem();
-        },
+    return GridView.builder(
+      physics: NeverScrollableScrollPhysics(),
+
+      gridDelegate: SliverGridDelegateWithMaxCrossAxisExtent(
+        maxCrossAxisExtent: 185,
+        mainAxisExtent: 225,
+        crossAxisSpacing: 10,
+        mainAxisSpacing: 10,
       ),
+      itemCount: 22,
+      itemBuilder: (context, index) {
+        return CustomProductListViewitem();
+      },
     );
   }
 }
