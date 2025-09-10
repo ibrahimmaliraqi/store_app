@@ -1,4 +1,5 @@
 import 'package:dartz/dartz.dart';
+import 'package:dio/dio.dart';
 import 'package:store/Features/home/data/models/product_model/product_model.dart';
 import 'package:store/Features/home/data/repos/home_repo.dart';
 import 'package:store/core/errors/failure.dart';
@@ -17,6 +18,9 @@ class HomeRepoImpl implements HomeRepo {
       }
       return right(burager);
     } catch (e) {
+      if (e is DioException) {
+        return left(ServerFailure.fromDioException(e));
+      }
       return left(ServerFailure(e.toString()));
     }
   }
