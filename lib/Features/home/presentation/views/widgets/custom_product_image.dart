@@ -8,11 +8,13 @@ class CustomProducImage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return CachedNetworkImage(
-      imageUrl: "https://i.ibb.co/Df6LgkLK/logo2.png",
-      width: 120,
-      height: 120,
-      fit: BoxFit.fill,
+    return AspectRatio(
+      aspectRatio: 1 / .85,
+      child: CachedNetworkImage(
+        imageUrl: "https://i.ibb.co/Df6LgkLK/logo2.png",
+
+        fit: BoxFit.fill,
+      ),
     );
   }
 }

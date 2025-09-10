@@ -1,5 +1,6 @@
 import 'package:flutter/rendering.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:store/core/utils/colors.dart';
 
 abstract class Styles {
   static TextStyle textStyle18 = TextStyle(
@@ -17,6 +18,7 @@ abstract class Styles {
   );
   static TextStyle textStyle25 = TextStyle(
     fontWeight: FontWeight.w600,
+    color: Colorss.kOrderAndTitleButtonColor,
     fontSize: 25,
   );
 }
