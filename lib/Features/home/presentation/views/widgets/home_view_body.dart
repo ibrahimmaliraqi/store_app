@@ -26,8 +26,30 @@ class HomeViewBody extends StatelessWidget {
           SizedBox(height: 38),
           CustomCategoryListView(),
           SizedBox(height: 40),
-          CustomProductListViewitem(),
+          CustomProductListView(),
         ],
+      ),
+    );
+  }
+}
+
+class CustomProductListView extends StatelessWidget {
+  const CustomProductListView({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Expanded(
+      child: GridView.builder(
+        gridDelegate: SliverGridDelegateWithMaxCrossAxisExtent(
+          maxCrossAxisExtent: 185,
+          mainAxisExtent: 225,
+          crossAxisSpacing: 10,
+          mainAxisSpacing: 10,
+        ),
+        itemCount: 20,
+        itemBuilder: (context, index) {
+          return CustomProductListViewitem();
+        },
       ),
     );
   }
