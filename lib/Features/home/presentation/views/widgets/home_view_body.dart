@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:store/Features/home/presentation/views/widgets/custom_app_bar.dart';
 import 'package:store/Features/home/presentation/views/widgets/custom_category_list_view.dart';
 import 'package:store/Features/home/presentation/views/widgets/custom_category_list_view_item.dart';
+import 'package:store/Features/home/presentation/views/widgets/custom_product_image.dart';
 import 'package:store/Features/home/presentation/views/widgets/custom_search_bar.dart';
 import 'package:store/core/utils/assets.dart';
 import 'package:store/core/utils/colors.dart';
@@ -51,12 +52,7 @@ class CustomProductListViewitem extends StatelessWidget {
       ),
       child: Column(
         children: [
-          CachedNetworkImage(
-            imageUrl: "https://i.ibb.co/Df6LgkLK/logo2.png",
-            width: 100,
-            height: 100,
-            fit: BoxFit.fill,
-          ),
+          CustomProducImage(),
         ],
       ),
     );
