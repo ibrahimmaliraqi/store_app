@@ -12,7 +12,7 @@ abstract class Styles {
     fontFamily: GoogleFonts.lobster().fontFamily,
   );
   static TextStyle textStyle16 = TextStyle(
-    fontWeight: FontWeight.w500,
+    fontWeight: FontWeight.w600,
     fontSize: 16,
   );
   static TextStyle textStyle25 = TextStyle(

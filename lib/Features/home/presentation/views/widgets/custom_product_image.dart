@@ -10,8 +10,8 @@ class CustomProducImage extends StatelessWidget {
   Widget build(BuildContext context) {
     return CachedNetworkImage(
       imageUrl: "https://i.ibb.co/Df6LgkLK/logo2.png",
-      width: 100,
-      height: 100,
+      width: 120,
+      height: 120,
       fit: BoxFit.fill,
     );
   }
