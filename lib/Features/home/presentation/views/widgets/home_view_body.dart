@@ -1,8 +1,10 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:store/Features/home/presentation/views/widgets/custom_app_bar.dart';
 import 'package:store/Features/home/presentation/views/widgets/custom_category_list_view.dart';
 import 'package:store/Features/home/presentation/views/widgets/custom_category_list_view_item.dart';
 import 'package:store/Features/home/presentation/views/widgets/custom_search_bar.dart';
+import 'package:store/core/utils/assets.dart';
 import 'package:store/core/utils/colors.dart';
 import 'package:store/core/utils/styles.dart';
 
@@ -20,6 +22,41 @@ class HomeViewBody extends StatelessWidget {
           CustomSearchBar(),
           SizedBox(height: 38),
           CustomCategoryListView(),
+          SizedBox(height: 40),
+          CustomProductListViewitem(),
+        ],
+      ),
+    );
+  }
+}
+
+class CustomProductListViewitem extends StatelessWidget {
+  const CustomProductListViewitem({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      width: 185,
+      height: 225,
+      decoration: BoxDecoration(
+        color: Colors.white,
+        borderRadius: BorderRadius.circular(20),
+        boxShadow: [
+          BoxShadow(
+            color: Colorss.kCategoryCardColor.withOpacity(.4),
+            blurRadius: 5,
+            spreadRadius: 2,
+          ),
+        ],
+      ),
+      child: Column(
+        children: [
+          CachedNetworkImage(
+            imageUrl: "https://i.ibb.co/Df6LgkLK/logo2.png",
+            width: 100,
+            height: 100,
+            fit: BoxFit.fill,
+          ),
         ],
       ),
     );
