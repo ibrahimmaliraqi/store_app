@@ -5,7 +5,9 @@ import 'package:store/core/utils/assets.dart';
 class CustomProducImage extends StatelessWidget {
   const CustomProducImage({
     super.key,
+    required this.imageUrl,
   });
+  final String imageUrl;
 
   @override
   Widget build(BuildContext context) {
@@ -20,8 +22,7 @@ class CustomProducImage extends StatelessWidget {
               child: Image.asset(Assets.errImage),
             );
           },
-          imageUrl:
-              "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=400",
+          imageUrl: imageUrl,
           fit: BoxFit.fill,
         ),
       ),

@@ -1,16 +1,14 @@
-import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:store/Features/home/data/repos/home_repo.dart';
 import 'package:store/Features/home/data/repos/home_repo_impl.dart';
 import 'package:store/Features/home/presentation/manager/product_cubit/product_cubit_cubit.dart';
 import 'package:store/core/utils/app_router.dart';
-import 'package:store/core/utils/app_services.dart';
 import 'package:store/core/utils/colors.dart';
 import 'package:store/core/utils/server_locator.dart';
 
 void main() {
+  setupAppLocator();
   runApp(StoreApp());
 }
 

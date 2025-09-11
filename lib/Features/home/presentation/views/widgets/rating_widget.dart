@@ -5,7 +5,9 @@ import 'package:store/core/utils/styles.dart';
 class RatingWidget extends StatelessWidget {
   const RatingWidget({
     super.key,
+    required this.rate,
   });
+  final double rate;
 
   @override
   Widget build(BuildContext context) {
@@ -20,7 +22,7 @@ class RatingWidget extends StatelessWidget {
           width: 5,
         ),
         Text(
-          "4.9",
+          rate.toString(),
           style: Styles.textStyle16.copyWith(
             fontWeight: FontWeight.bold,
           ),

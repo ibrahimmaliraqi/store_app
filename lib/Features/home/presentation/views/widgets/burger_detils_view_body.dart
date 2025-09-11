@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:store/Features/home/data/models/product_model/product_model.dart';
 import 'package:store/Features/home/presentation/views/widgets/action_button.dart';
 import 'package:store/Features/home/presentation/views/widgets/custom_detils_app_bar.dart';
 import 'package:store/Features/home/presentation/views/widgets/custom_product_image.dart';
@@ -8,7 +9,9 @@ import 'package:store/core/utils/styles.dart';
 class BurgerDetilsViewBody extends StatelessWidget {
   const BurgerDetilsViewBody({
     super.key,
+    required this.productModel,
   });
+  final ProductModel productModel;
 
   @override
   Widget build(BuildContext context) {
@@ -24,25 +27,36 @@ class BurgerDetilsViewBody extends StatelessWidget {
             ),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 35),
-              child: CustomProducImage(),
+              child: CustomProducImage(
+                imageUrl: productModel.image,
+              ),
             ),
             SizedBox(
               height: 30,
             ),
-            Text(
-              "Fried Chicken Burger",
-              style: Styles.textStyle25,
+            Align(
+              alignment: AlignmentDirectional.centerEnd,
+              child: Text(
+                productModel.name,
+                style: Styles.textStyle25,
+              ),
             ),
             SizedBox(
               height: 9,
             ),
-            RatingWidget(),
-            Text(
-              "Indulge in our crispy and savory Fried Chicken Burger, made with a juicy chicken patty, hand-breaded and deep-fried to perfection, served on a warm bun with lettuce, tomato, and a creamy sauce.",
-              style: Styles.textStyle16.copyWith(
-                fontWeight: FontWeight.w400,
+            RatingWidget(
+              rate: productModel.rating,
+            ),
+            Align(
+              alignment: AlignmentDirectional.centerStart,
+
+              child: Text(
+                productModel.description,
+                style: Styles.textStyle16.copyWith(
+                  fontWeight: FontWeight.w400,
+                ),
+                textAlign: TextAlign.end,
               ),
-              textAlign: TextAlign.justify,
             ),
             Spacer(),
             ActionButtons(),
