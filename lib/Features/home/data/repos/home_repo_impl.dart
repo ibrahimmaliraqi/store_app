@@ -6,6 +6,9 @@ import 'package:store/core/errors/failure.dart';
 import 'package:store/core/utils/app_services.dart';
 
 class HomeRepoImpl implements HomeRepo {
+  final AppServices appServices;
+
+  HomeRepoImpl(this.appServices);
   @override
   Future<Either<ServerFailure, List<ProductModel>>> fetchProduct() async {
     try {
